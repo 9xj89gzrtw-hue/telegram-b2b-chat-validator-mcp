@@ -1,0 +1,60 @@
+{
+  "title": "Telegram chat validator input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "links": {
+      "title": "Telegram links to validate",
+      "type": "array",
+      "description": "Any mix of https://t.me/name, t.me/name, https://t.me/s/name, @name or bare name. Invite links (t.me/+hash, t.me/joinchat/...) are reported as private-invite because they cannot be checked without joining.",
+      "editor": "stringList",
+      "prefill": ["https://t.me/ozon_chat", "https://t.me/python", "https://t.me/this_chat_does_not_exist_zzz9"],
+      "default": [],
+      "items": { "type": "string" }
+    },
+    "includeDemoSample": {
+      "title": "Include the free demo sample of 35 chats",
+      "type": "boolean",
+      "description": "Adds 35 real Russian-speaking B2B chats (WB/Ozon sellers, wholesale, cargo, IT) to the dataset. This is the free slice of the 1,000+ chat base.",
+      "default": true
+    },
+    "demoTopics": {
+      "title": "Filter the demo sample by category",
+      "type": "array",
+      "description": "Leave empty for all categories. Example: [\"Маркетплейсы WB/Ozon\", \"Закупки/Опт\"].",
+      "editor": "stringList",
+      "default": [],
+      "items": { "type": "string" }
+    },
+    "minMembers": {
+      "title": "Minimum members/subscribers",
+      "type": "integer",
+      "description": "Drop chats below this size from the demo sample. 0 keeps everything.",
+      "default": 0,
+      "minimum": 0
+    },
+    "includeOffer": {
+      "title": "Include the full-base offer record",
+      "type": "boolean",
+      "description": "Adds one summary record with the direct purchase link for the full 1,000+ chat base (TW1-TG), the RUB price and the Plati.Market card.",
+      "default": true
+    },
+    "concurrency": {
+      "title": "Parallel requests",
+      "type": "integer",
+      "description": "How many t.me pages to fetch at once. Keep it at 3 or lower: Telegram rate-limits aggressive scrapers.",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 8
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout (seconds)",
+      "type": "integer",
+      "description": "Per-link HTTP timeout.",
+      "default": 15,
+      "minimum": 3,
+      "maximum": 60
+    }
+  },
+  "required": []
+}

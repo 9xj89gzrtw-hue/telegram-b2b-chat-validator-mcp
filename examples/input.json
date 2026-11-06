@@ -1,0 +1,17 @@
+{
+  "links": [
+    "https://t.me/ozon_chat",
+    "https://t.me/marketplacechati",
+    "https://t.me/contentwbchat",
+    "https://t.me/ozon_fbs",
+    "https://t.me/postavshiki_rossiya",
+    "https://t.me/python",
+    "https://t.me/this_chat_does_not_exist_zzz9"
+  ],
+  "includeDemoSample": true,
+  "demoTopics": ["Маркетплейсы WB/Ozon", "Закупки/Опт"],
+  "minMembers": 5000,
+  "includeOffer": true,
+  "concurrency": 3,
+  "requestTimeoutSecs": 15
+}

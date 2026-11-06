@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "telegram-b2b-chats": {
+      "command": "npx",
+      "args": ["-y", "github:9xj89gzrtw-hue/telegram-b2b-chat-validator-mcp"],
+      "env": {}
+    }
+  }
+}

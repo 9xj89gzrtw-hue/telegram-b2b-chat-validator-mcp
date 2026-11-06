@@ -1,0 +1,48 @@
+{
+  "actorSpecification": 1,
+  "name": "telegram-open-chats-wb-ozon-validator",
+  "title": "Telegram Open Chats Validator — WB/Ozon B2B (1,000+ RU chats)",
+  "description": "Checks a list of t.me links against public Telegram pages: alive or dead, group vs channel, members, online count. Returns a free demo slice of 35 Russian B2B chats for Wildberries/Ozon sellers, wholesale, cargo and IT. The full base of 1,000+ verified chats with Excel/CSV export ships as TW1-TG: https://9xj89gzrtw-hue.github.io/tg-chats/",
+  "version": "1.0.0",
+  "buildTag": "latest",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "fields": {
+        "username": { "type": "string", "description": "Public @username without the @, from the link" },
+        "link": { "type": "string", "description": "Normalised https://t.me/ link" },
+        "exists": { "type": "boolean", "description": "true when Telegram returns a public preview for the link" },
+        "chatType": { "type": "string", "description": "group | channel | user-or-bot | private-invite | missing" },
+        "title": { "type": "string", "description": "Public title from the t.me preview" },
+        "about": { "type": "string", "description": "Public description (og:description)" },
+        "members": { "type": "integer", "description": "Members for groups, subscribers for channels" },
+        "online": { "type": "integer", "description": "Online right now, groups only; null for channels" },
+        "topic": { "type": "string", "description": "Category from the demo sample; null for user-supplied links" },
+        "checked_at": { "type": "string", "description": "ISO timestamp of the check" },
+        "error": { "type": "string", "description": "Network or parse error, null on success" },
+        "fullBaseUrl": { "type": "string", "description": "Where the full 1,000+ chat base is sold" }
+      },
+      "views": {
+        "overview": {
+          "title": "Validated chats",
+          "transformation": { "fields": ["username", "chatType", "members", "online", "title", "topic", "exists"] }
+        }
+      }
+    }
+  },
+  "categories": ["AUTOMATION", "DATA_EXTRACTION", "MARKETING"],
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "meta": {
+    "generatedBy": "9xj89gzrtw-hue/telegram-b2b-chat-validator-mcp",
+    "fullBase": "https://9xj89gzrtw-hue.github.io/tg-chats/",
+    "platiLot": "https://plati.market/itm/6354600"
+  },
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 900,
+    "memoryMbytes": 512
+  }
+}

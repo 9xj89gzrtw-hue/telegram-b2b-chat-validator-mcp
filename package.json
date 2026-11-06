@@ -1,0 +1,52 @@
+{
+  "name": "telegram-b2b-chat-validator-mcp",
+  "version": "1.0.0",
+  "description": "MCP server + Apify Actor that validates Telegram t.me links (alive, members, online, group vs channel) and ships a free 35-chat demo of a 1,000+ Russian B2B chat base for Wildberries/Ozon sellers.",
+  "type": "module",
+  "main": "src/run.js",
+  "bin": {
+    "telegram-b2b-chat-validator-mcp": "mcp/server.js"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "mcp": "node mcp/server.js",
+    "test": "node --test tests/",
+    "smoke": "node src/main.js --links https://t.me/ozon_chat,https://t.me/python --no-demo --no-offer"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude-mcp",
+    "apify",
+    "apify-actor",
+    "telegram",
+    "telegram-scraper",
+    "telegram-chats",
+    "tme",
+    "wildberries",
+    "ozon",
+    "marketplace",
+    "b2b",
+    "lead-generation",
+    "scraper",
+    "no-api-key"
+  ],
+  "author": "9xj89gzrtw-hue",
+  "license": "MIT",
+  "homepage": "https://9xj89gzrtw-hue.github.io/tg-chats/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9xj89gzrtw-hue/telegram-b2b-chat-validator-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/9xj89gzrtw-hue/telegram-b2b-chat-validator-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "apify": "^3.2.0"
+  }
+}
