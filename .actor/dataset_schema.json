@@ -3,30 +3,115 @@
   "fields": {
     "type": "object",
     "properties": {
-      "username": { "type": "string", "description": "Public @username without the @, from the link" },
-      "link": { "type": "string", "description": "Normalised https://t.me/ link" },
-      "exists": { "type": "boolean", "description": "true when Telegram returns a public preview for the link" },
-      "chatType": { "type": "string", "description": "group | channel | user-or-bot | private-invite | missing" },
-      "title": { "type": "string", "description": "Public title from the t.me preview" },
-      "about": { "type": "string", "description": "Public description (og:description)" },
-      "members": { "type": "integer", "description": "Members for groups, subscribers for channels" },
-      "online": { "type": "integer", "description": "Online right now, groups only; null for channels" },
-      "topic": { "type": "string", "description": "Category from the demo sample; null for user-supplied links" },
-      "city": { "type": "string", "description": "City/region hint from the demo sample" },
-      "checked_at": { "type": "string", "description": "ISO timestamp of the check" },
-      "error": { "type": "string", "description": "Network or parse error, null on success" },
-      "source": { "type": "string", "description": "input | demo" },
-      "fullBaseUrl": { "type": "string", "description": "Where the full 1,200+ chat base is sold" },
-      "offer": { "type": "string", "description": "One-line purchase hint repeated in every record" }
+      "username": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Public @username without the @, from the link"
+      },
+      "link": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Normalised https://t.me/ link"
+      },
+      "exists": {
+        "type": "boolean",
+        "description": "true when Telegram returns a public preview for the link"
+      },
+      "chatType": {
+        "type": "string",
+        "description": "group | channel | user-or-bot | private-invite | missing"
+      },
+      "title": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Public title from the t.me preview"
+      },
+      "about": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Public description (og:description)"
+      },
+      "members": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "description": "Members for groups, subscribers for channels"
+      },
+      "online": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "description": "Online right now, groups only; null for channels"
+      },
+      "topic": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Category from the demo sample; null for user-supplied links"
+      },
+      "city": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "City/region hint from the demo sample"
+      },
+      "checked_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "ISO timestamp of the check"
+      },
+      "error": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Network or parse error, null on success"
+      },
+      "source": {
+        "type": "string",
+        "description": "input | demo"
+      },
+      "fullBaseUrl": {
+        "type": "string",
+        "description": "Where the full 1,200+ chat base is sold"
+      },
+      "offer": {
+        "type": "string",
+        "description": "One-line purchase hint repeated in every record"
+      }
     }
   },
   "views": {
     "overview": {
       "title": "Validated chats",
       "transformation": {
-        "fields": ["username", "chatType", "members", "online", "title", "topic", "exists"]
+        "fields": [
+          "username",
+          "chatType",
+          "members",
+          "online",
+          "title",
+          "topic",
+          "exists"
+        ]
       },
-      "display": { "component": "table" }
+      "display": {
+        "component": "table"
+      }
     }
   }
 }
