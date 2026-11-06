@@ -8,31 +8,13 @@
   "input": "./INPUT_SCHEMA.json",
   "dockerfile": "../Dockerfile",
   "storages": {
-    "dataset": {
-      "actorSpecification": 1,
-      "fields": {
-        "username": { "type": "string", "description": "Public @username without the @, from the link" },
-        "link": { "type": "string", "description": "Normalised https://t.me/ link" },
-        "exists": { "type": "boolean", "description": "true when Telegram returns a public preview for the link" },
-        "chatType": { "type": "string", "description": "group | channel | user-or-bot | private-invite | missing" },
-        "title": { "type": "string", "description": "Public title from the t.me preview" },
-        "about": { "type": "string", "description": "Public description (og:description)" },
-        "members": { "type": "integer", "description": "Members for groups, subscribers for channels" },
-        "online": { "type": "integer", "description": "Online right now, groups only; null for channels" },
-        "topic": { "type": "string", "description": "Category from the demo sample; null for user-supplied links" },
-        "checked_at": { "type": "string", "description": "ISO timestamp of the check" },
-        "error": { "type": "string", "description": "Network or parse error, null on success" },
-        "fullBaseUrl": { "type": "string", "description": "Where the full 1,000+ chat base is sold" }
-      },
-      "views": {
-        "overview": {
-          "title": "Validated chats",
-          "transformation": { "fields": ["username", "chatType", "members", "online", "title", "topic", "exists"] }
-        }
-      }
-    }
+    "dataset": "./dataset_schema.json"
   },
-  "categories": ["AUTOMATION", "DATA_EXTRACTION", "MARKETING"],
+  "categories": [
+    "AUTOMATION",
+    "DATA_EXTRACTION",
+    "MARKETING"
+  ],
   "minMemoryMbytes": 256,
   "maxMemoryMbytes": 1024,
   "meta": {
