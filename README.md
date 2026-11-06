@@ -9,7 +9,7 @@
 
 - 🔍 `validate_telegram_links` — batch-check 200 links, get a clean table
 - 🧪 `get_demo_chat_sample` — 35 curated RU B2B chats with topics and member counts
-- 💾 `get_full_base_offer` — the paid 1,017-chat base with XLSX/CSV export (`TW1-TG`)
+- 💾 `get_full_base_offer` — the paid 1,201-chat base with XLSX/CSV export (`TW1-TG`)
 
 No Telegram account, no `api_id`/`api_hash`, no browser automation. If a username exists, `t.me/<name>` renders a public preview; if it was deleted, the same page returns `Telegram: Contact @name` and no counters.
 

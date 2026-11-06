@@ -10,7 +10,7 @@ export const OFFER = {
   code: "TW1-TG",
   priceRub: 490,
   demoChats: 35,
-  totalChats: 1017,
+  totalChats: 1201,
   storeUrl: "https://9xj89gzrtw-hue.github.io/tg-chats/",
   checkoutUrl: "https://oplata.info/asp2/pay_wm.asp?id_d=6354600&ai=1481449&lang=ru-RU",
   platiUrl: "https://plati.market/itm/6354600",
@@ -23,7 +23,7 @@ export const OFFER = {
     "CSV export of whatever you validated in this run"
   ],
   paidFeatures: [
-    "1,017 verified public chats (WB/Ozon, wholesale, cargo, real estate, IT, crypto, education, auto, local)",
+    "1,201 verified public chats (WB/Ozon, wholesale, cargo, real estate, IT, crypto, education, auto, local)",
     "XLSX/CSV with topic, city, members, last-checked date",
     "offline validator page: paste 500 links, get a clean table",
     "lifetime key, no subscription"
