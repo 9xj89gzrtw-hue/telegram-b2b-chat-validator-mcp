@@ -3,14 +3,16 @@
   "title": "Telegram B2B chat validator — output",
   "description": "Validated t.me links plus a free 35-chat demo of the Russian B2B chat base (WB/Ozon, wholesale, cargo, IT).",
   "properties": {
-    "chats": {
+    "results": {
+      "type": "string",
       "title": "Validated chats",
-      "description": "One row per checked link (exists, chatType, members, online, title) followed by the demo sample and one offer record with the full-base purchase links.",
-      "template": "{{links.apiDefaultDatasetUrl}}/items?format=json"
+      "description": "One row per checked link (exists, chatType, members, online, title), then the 35-chat demo sample, then one offer record with the full-base purchase links.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
     },
     "csv": {
+      "type": "string",
       "title": "Validated chats (CSV)",
-      "description": "Same rows as the JSON dataset, ready for Excel / Google Sheets.",
+      "description": "Same rows as CSV, ready for Excel / Google Sheets.",
       "template": "{{links.apiDefaultDatasetUrl}}/items?format=csv"
     }
   }
