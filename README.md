@@ -1,5 +1,8 @@
 # Telegram B2B Chat Validator — MCP Server + Apify Actor
 
+> **Want the full 1,201-chat base and Excel export?**
+> **TG Chat Validator Pro** (`TW1-TG`, 490 ₽) adds the complete verified catalog, the offline validator and a clean XLSX/CSV: **https://9xj89gzrtw-hue.github.io/tg-chats/** · [Plati.Market lot 6354600](https://plati.market/itm/6354600).
+
 **Validate `t.me` links without login, API keys or a Telegram client.** One HTTP request per link to the public `t.me` preview page gives you: alive or dead, group vs channel, member count, and who is online right now. Ships with a **free demo slice of 35 real Russian-speaking B2B chats** for Wildberries/Ozon sellers, wholesale buyers, cargo brokers and IT freelancers.
 
 [![MCP](https://img.shields.io/badge/MCP-server-6f42c1)](https://modelcontextprotocol.io)
